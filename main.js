@@ -7,9 +7,10 @@ import gsap from "gsap/gsap-core";
 const scene = new THREE.Scene();
 
 //Create out Sphere   (Radius, WithSegments, HeightSegments, phiStart, phiLength, thetaStart, thetaLength)
-const geometry = new THREE.BoxGeometry(5, 5, 5);
+const geometry = new THREE.SphereGeometry(3, 64, 64);
 const material = new THREE.MeshStandardMaterial({
   color: "#A020F0",
+  roughness: 0.2,
 });
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
@@ -21,8 +22,8 @@ const sizes = {
 };
 
 //Light
-// const light1 = new THREE.PointLight(0xffffff, 700, 100, 1.8);
-const light1 = new THREE.AmbientLight(0x404040, 10);
+const light1 = new THREE.PointLight(0xffffff, 700, 100, 1.8);
+// const light1 = new THREE.AmbientLight(0x404040, 10);
 light1.position.set(0, 50, 10);
 scene.add(light1);
 
