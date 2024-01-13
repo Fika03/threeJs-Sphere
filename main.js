@@ -21,13 +21,29 @@ const sizes = {
 };
 
 //Light
-const light1 = new THREE.PointLight(0xffffff, 500, 100, 2);
-light1.position.set(0, 20, 10);
+const light1 = new THREE.PointLight(0xffffff, 700, 100, 1.8);
+light1.position.set(0, 50, 10);
 scene.add(light1);
 
-const light2 = new THREE.PointLight(0xffffff, 50, 100, 2);
-light2.position.set(0, -50, -10);
+const light2 = new THREE.PointLight(0xffffff, 100, 100, 2);
+light2.position.set(0, -50, 10);
 scene.add(light2);
+
+// const light3 = new THREE.PointLight(0xffffff, 500, 100, 2);
+// light3.position.set(50, -50, 10);
+// scene.add(light3);
+
+// const light4 = new THREE.PointLight(0xffffff, 500, 100, 2);
+// light4.position.set(50, -50, 10);
+// scene.add(light4);
+
+// const light5 = new THREE.PointLight(0xffffff, 500, 100, 2);
+// light5.position.set(50, -50, 10);
+// scene.add(light5);
+
+// const light6 = new THREE.PointLight(0xffffff, 500, 100, 2);
+// light6.position.set(50, -50, 10);
+// scene.add(light6);
 
 //Camera
 const camera = new THREE.PerspectiveCamera(
@@ -76,7 +92,7 @@ loop();
 
 //TimeLine
 const tl = gsap.timeline({ defaults: { duration: 1 } });
-tl.fromTo(mesh.scale, { z: 0, x: 0, y: 0 }, { z: 1, x: 1, y: 1 });
+// tl.fromTo(mesh.scale, { z: 0, x: 0, y: 0 }, { z: 1, x: 1, y: 1 });
 tl.fromTo("nav", { y: "-100%" }, { y: "0%" });
 tl.fromTo(".title", { opacity: 0 }, { opacity: 1 });
 
